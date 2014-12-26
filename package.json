@@ -1,0 +1,16 @@
+{
+  "name": "Home-work-2",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "oksanych",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-connect": "^2.2.0",
+    "opn": "^1.0.1"
+  }
+}
