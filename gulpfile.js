@@ -8,18 +8,20 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     minifyCss = require('gulp-minify-css'),
-    clean = require('gulp-clean');
+    clean = require('gulp-clean'),
+    sass = require('gulp-ruby-sass');
+
+//Scss to css
+gulp.task('scss', function(){
+   gulp.src('app/scss/**/*.scss')
+       .pipe(sass())
+       .pipe(gulp.dest('app/css/'))
+});
 
 //Clear dist
-//gulp.task('clean', function () {
-//    return gulp.src('dist/*')
-//        .pipe(clean({force: true}))
-//        .pipe(gulp.dest('dist'));
-//});
-
 gulp.task('clean', function () {
-    return gulp.src('app/tmp', {read: false})
-        .pipe(gulp.dest('dist'));
+    return gulp.src('dist/*')
+        .pipe(clean({force: true}));
 });
 
 // Assembly project
@@ -65,6 +67,12 @@ gulp.task('css', function(){
         .pipe(connect.reload());
 })
 
+//scss
+gulp.task('scss', function(){
+    gulp.src('app/scss/*.scss')
+        .pipe(connect.reload());
+})
+
 //js
 gulp.task('js', function(){
     gulp.src('app/js/*.js')
@@ -75,6 +83,7 @@ gulp.task('js', function(){
 gulp.task('watch', function(){
     gulp.watch(['app/*.html'], ['html']);
     gulp.watch(['app/css/*.css'], ['css']);
+    gulp.watch(['app/scss/**/*.scss'], ['scss']);
     gulp.watch(['app/js/*.js'], ['js']);
     gulp.watch('bower.json', ['wiredep']);
 })

@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- build:css css/vendor.css -->
+        <!-- build:css css/normalize.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_component/normalize.css/normalize.css" />
         <!-- endbower -->
@@ -19,13 +19,16 @@
         <!-- build:css css/main.css -->
         <link rel="stylesheet" href="css/main.css">
         <!-- endbuild -->
+
+        <!-- build:js js/modernizr.js -->
+        <script src="bower_component/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">Вы используете <strong>устаревшый</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите Ваш браузер</a>.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
         <div class="wrapper">
             <header class="header">
                 <div class="block-header-top">
@@ -43,7 +46,10 @@
                         </div>
 
                         <div class="phone-header">
-                            <p class="phone-header__number"><span class="phone-header__number_blue">+7 (921) </span>322 12 32</p>
+                            <a href="tel:+79213221232" class="phone-header__number">
+                                <span class="phone-header__code">+7 (921) </span>
+                                <span class="phone-header__num">322 12 32</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -55,38 +61,37 @@
                         </div>
 
                         <div class="search-header">
-                            <form action="" class="search-header-form">
-                                <input type="search" placeholder="iMac 27 дюймов"/>
-                                <input type="submit" value="Поиск"/>
+                            <form action="" class="search-header__form">
+                                <input class="search-header__search" type="search" placeholder="iMac 27 дюймов"/>
+                                <input class="search-header__submit" type="submit" value="Поиск"/>
                             </form>
                         </div>
 
                         <div class="links-header">
                             <a href="" class="links-header__link">Карта проезда</a>
                             <a href="" class="links-header__link">История заказов</a>
-                            <a href="" class="links-header__link links-header__link--cart">
+                        </div>
+                        <div class="cart-header">
+                            <a href="" class="links-header__link--cart">
                                 Корзина <span class="links-header__link--cart_number">(3)</span>
-                                <ul class="links-header-cart">
-                                    <li class="links-header-cart__item">
-                                        <a class="links-header-cart__link" href="">
-                                            <img class="links-header-cart__img" src="images/iPhone-6.jpg" alt="iPhone 6"/>
-                                            <p class="links-header-cart__title">iPhone 6</p>
-                                        </a>
-                                    </li>
-                                    <li class="links-header-cart__item">
-                                        <a class="links-header-cart__link" href="">
-                                            <img class="links-header-cart__img" src="images/iPad-Air.jpg" alt="iPad Air Wi-Fi"/>
-                                            <p class="links-header-cart__title">iPad Air Wi-Fi + Cellular 128GB - Silver</p>
-                                        </a>
-                                    </li>
-                                    <li class="links-header-cart__item">
-                                        <a class="links-header-cart__link" href="">
-                                            <img class="links-header-cart__img" src="images/MacBook-Air.jpg" alt="MacBook Air"/>
-                                            <p class="links-header-cart__title">MacBook Air</p>
-                                        </a>
-                                    </li>
-                                </ul>
                             </a>
+                            <ul class="links-header-cart">
+                                <li class="links-header-cart__item">
+                                    <a class="links-header-cart__link" href="">
+                                        <div class="links-header-cart__img"><img src="images/iPhone-6.jpg" alt="iPhone 6"/></div><p class="links-header-cart__title">iPhone 6</p>
+                                    </a>
+                                </li>
+                                <li class="links-header-cart__item">
+                                    <a class="links-header-cart__link" href="">
+                                        <div class="links-header-cart__img"><img src="images/iPad-Air.jpg" alt="iPad Air Wi-Fi"/></div><p class="links-header-cart__title">iPad Air Wi-Fi + Cellular 128GB - Silver</p>
+                                    </a>
+                                </li>
+                                <li class="links-header-cart__item">
+                                    <a class="links-header-cart__link" href="">
+                                        <div class="links-header-cart__img"><img src="images/MacBook-Air.jpg" alt="MacBook Air"/></div><p class="links-header-cart__title">MacBook Air</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -116,7 +121,30 @@
                         <p class="bread-crumbs__link--title">iPad Air Wi-Fi + Cellular 128GB - Silver</p>
                     </div>
                     <section class="product">
-                        <div class="product__img-slider"></div>
+                        <div class="product__img-slider">
+                            <div class="slideshow">
+                                <div class="slideshow_display">
+                                    <img src="images/iPad__big.jpg" alt="iPad_Air"/>
+                                </div>
+                                <ul class="slideshow__list">
+                                    <li class="slideshow__item">
+                                        <a class="slideshow__pic" href="">
+                                            <img src="images/iPad__small--1.jpg" alt="iPad_Air"/>
+                                        </a>
+                                    </li>
+                                    <li class="slideshow__item">
+                                        <a class="slideshow__pic" href="">
+                                            <img src="images/iPad__small--2.jpg" alt="iPad_Air"/>
+                                        </a>
+                                    </li>
+                                    <li class="slideshow__item">
+                                        <a class="slideshow__pic" href="">
+                                            <img src="images/iPad__small--3.jpg" alt="iPad_Air"/>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="product__review">
                             <h1 class="product__title">iPad Air Wi-Fi + Cellular 128GB - Silver</h1>
                             <div class="product__table">
@@ -167,9 +195,7 @@
                     <section class="about-shop">
                         <h2 class="about-shop__title">Пара слов о магазине</h2>
                         <p class="about-shop__text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales                              pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis                                 orci, sed rhoncus sapien nunc eget odio.
-                            Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis                               dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor                              sit amet, consectetur adipiscing elit.
-                            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus                                sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo                              commodo. Proin sodales pulvinar tempor.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
                         </p>
                     </section>
                 </div>
@@ -178,26 +204,26 @@
             <footer class="block-footer">
                 <div class="footer">
                     <div class="logo-footer">
-                        <a class="logo-footer_img" href="">ЭпплShop</a>
+                        <a class="logo-footer_img" href="/">ЭпплShop</a>
                     </div>
 
                     <div class="links-footer">
                         <ul class="links-footer__list">
-                            <h3>О магазине</h3>
+                            <h3 class="links-footer__title">О магазине</h3>
                             <li class="links-footer__item"><a class="links-footer__link" href="">О нас</a></li>
                             <li class="links-footer__item"><a class="links-footer__link" href="">Наши цены</a></li>
                             <li class="links-footer__item"><a class="links-footer__link" href="">Наши скидки</a></li>
                             <li class="links-footer__item"><a class="links-footer__link" href="">Акции</a></li>
                         </ul>
                         <ul class="links-footer__list">
-                            <h3>Каталог</h3>
+                            <h3 class="links-footer__title">Каталог</h3>
                             <li class="links-footer__item"><a class="links-footer__link" href="">Смартвоны</a></li>
                             <li class="links-footer__item"><a class="links-footer__link" href="">Планшеты</a></li>
                             <li class="links-footer__item"><a class="links-footer__link" href="">Компьютеры</a></li>
                             <li class="links-footer__item"><a class="links-footer__link" href="">Аксессуары</a></li>
                         </ul>
                         <ul class="links-footer__list">
-                            <h3>Контакты</h3>
+                            <h3 class="links-footer__title">Контакты</h3>
                             <li class="links-footer__item"><a class="links-footer__link" href="">Телефоны</a></li>
                             <li class="links-footer__item"><a class="links-footer__link" href="">Адреса</a></li>
                             <li class="links-footer__item"><a class="links-footer__link" href="">Карта проезда</a></li>
@@ -221,14 +247,14 @@
             </footer>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-        <!-- build:js js/vendor.js -->
+        <!-- build:js js/jquery.js -->
         <!-- bower:js -->
-        <script src="bower_component/modernizr/modernizr.js"></script>
         <script src="bower_component/jquery/jquery.js"></script>
-        <script src="js/css3-multi-column.min.js"></script>
         <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js js/css3-multi-column.js -->
+        <script src="js/css3-multi-column.min.js"></script>
         <!-- endbuild -->
 
         <!-- build:js js/main.js -->

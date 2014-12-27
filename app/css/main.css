@@ -79,13 +79,579 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+@font-face {
+    font-family: elektra_light_probold;
+    src: url(../fonts/font.eot);
+    src: url(../fonts/font.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/font.woff2) format('woff2'),
+    url(../fonts/font.woff) format('woff'),
+    url(../fonts/font.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: elektra_light_proregular;
+    src: url(../fonts/elektra_light_pro.eot);
+    src: url(../fonts/elektra_light_pro.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/elektra_light_pro.woff2) format('woff2'),
+    url(../fonts/elektra_light_pro.woff) format('woff'),
+    url(../fonts/elektra_light_pro.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: elektra_medium_proitalic;
+    src: url(../fonts/elektra_medium_pro_italic.eot);
+    src: url(../fonts/elektra_medium_pro_italic.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/elektra_medium_pro_italic.woff2) format('woff2'),
+    url(../fonts/elektra_medium_pro_italic.woff) format('woff'),
+    url(../fonts/elektra_medium_pro_italic.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: elektra_medium_proregular;
+    src: url(../fonts/elektra_medium_pro.eot);
+    src: url(../fonts/elektra_medium_pro.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/elektra_medium_pro.woff2) format('woff2'),
+    url(../fonts/elektra_medium_pro.woff) format('woff'),
+    url../(fonts/elektra_medium_pro.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+body {
+    font-family: elektra_light_proregular;
+    font-size: 16px;
+    line-height: 16px;
+    color: #5c7b98;
+}
+
+.wrapper{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 1020px;
+}
+
+.block-header-top{
+    width: 100%;
+    background: #45626e;
+}
+
+.header-top{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header-top{
+    position: relative;
+    height: 41px;
+}
+
+.social-header{
+    position: absolute;
+    margin: 8px 0 0;
+}
+
+.social-header__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-header__item{
+    display: inline-block;
+}
+
+.social-header__link{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    color: transparent;
+}
+
+.social-header__link--vk{
+    background: url(../images/sprite.png) no-repeat 0 0;
+}
+
+.social-header__link--fb{
+    background: url(../images/sprite.png) no-repeat -31px 0;
+}
+
+.social-header__link--tw{
+    background: url(../images/sprite.png) no-repeat -61px 0;
+}
+
+.address-header{
+    position: absolute;
+    left: 400px;
+    margin-top: 14px;
+}
+
+.address-header__text{
+    margin: 0;
+    color: #fff;
+    font-size: 13px;
+    position: relative;
+}
+
+.address-header__text:before{
+    content: '';
+    position: absolute;
+    background: url(../images/sprite.png) no-repeat -91px 0;
+    width: 16px;
+    height: 22px;
+    top: -5px;
+    left: -25px;
+}
+
+.phone-header{
+    position: absolute;
+    right: 0;
+    margin: 0;
+}
+
+.phone-header__number{
+    margin: 10px 0 0;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.phone-header__code{
+    color: #00b9fe;
+    font-weight: 700;
+    font-size: 14px;
+    font-size: 14px;
+    line-height: 10px;
+    vertical-align: top;
+}
+
+.phone-header__num{
+    color: #fff;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.block-header-middle{
+    background: #e8eef5;
+}
+
+.header-middle{
+    width: 1000px;
+    margin: 0 auto;
+    height: 100px;
+}
+
+.logo-header{
+    overflow: hidden;
+    float: left;
+    margin-top: 24px;
+}
+
+.logo-header__img{
+    display: inline-block;
+    background: url(../images/sprite.png) no-repeat -1px -29px;
+    width: 199px;
+    height: 57px;
+    color: transparent;
+}
+
+.search-header{
+    float: left;
+    margin: 34px 0 0 50px;
+}
+
+.search-header__form{
+    position: relative;
+}
+
+.search-header__search{
+    width: 336px;
+    height: 33px;
+    border: 1px solid #dce6f0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: #dce6f0;
+    outline: none;
+}
+
+.search-header__submit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: #00b9fe;
+    height: 35px;
+    width: 80px;
+    color: #fff;
+    font-family: elektra_light_proregular;
+    font-weight: 700;
+    outline: none;
+}
+
+.links-header{
+    float: left;
+    margin: 44px 0 0 25px;
+}
+
+.links-header__link{
+    font-size: 13px;
+    color: #00b9fe;
+    margin-left: 20px;
+}
+
+.links-header__link:first-child{
+    margin-left: 0;
+}
+
+.links-header__link:hover{
+    color: #613993;
+}
+
+.cart-header{
+    float: left;
+    margin: 30px 0 0 20px;
+    position: relative;
+}
+
+.cart-header:hover .links-header-cart{
+    display: block;
+}
+
+.links-header__link--cart{
+    display: inline-block;
+    padding: 15px 19px 15px 40px;
+    font-size: 13px;
+    color: #5c7b98;
+    border: 1px solid #e8eef5;
+}
+
+.links-header__link--cart:before{
+    content: '';
+    position: absolute;
+    background: url(../images/sprite.png) no-repeat -110px -2px;
+    width: 20px;
+    height: 17px;
+    left: 10px;
+    top: 11px;
+}
+
+.links-header__link--cart:hover{
+    border: 1px solid #dce6f0;
+}
+
+.cart-header:hover{
+    background: #fff;
+}
+
+.links-header-cart__item{
+    height: 77px;
+}
+
+.links-header-cart__item:nth-child(2n){
+    background: #eef2f4;
+}
+
+.links-header-cart{
+    position: absolute;
+    list-style: none;
+    margin: -2px 0 0 0;
+    padding: 0;
+    width: 246px;
+    right: 0;
+    z-index: 1;
+    border: 1px solid #dce6f0;
+    background-color: #fff;
+    display: none;
+}
+
+.links-header-cart__img{
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+}
+
+.links-header-cart__link{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0 ;
+}
+
+.links-header-cart__title{
+    display: inline-block;
+    font-size: 13px;
+    color: #00b9fe;
+    text-decoration: underline;
+    width: 140px;
+    vertical-align: middle;
+}
+
+.links-header-cart__link:hover .links-header-cart__title{
+    color: #613993;
+}
+
+.block-header-bottom{
+    background: #f7f7f7;
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #f5f5f5 ;
+}
+
+.block-header-bottom:after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background: #e3e3e3;
+    bottom: -1px;
+}
+
+.header-bottom{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.nav__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link{
+    color: #5c7b98;
+    text-decoration: none;
+}
+
+.nav__item{
+    display: inline-block;
+}
+
+
+
+
+.block-content{
+    width: 1000px;
+    margin: 0 auto 70px;
+}
+
+.bread-crumbs{
+    font-size: 14px;
+}
+
+.bread-crumbs__link{
+    color: #00b9fe;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.bread-crumbs__link:hover{
+    color: #613993;
+}
+
+.bread-crumbs__link--title{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #5c7b98;
+}
+
+.product{
+    margin-bottom: 50px;
+}
+
+.product__img-slider{
+    display: inline-block;
+}
+
+.slideshow_display{
+    width: 300px;
+    height: 240px;
+    position: relative;
+}
+
+.slideshow_display img{
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.slideshow__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow__item{
+    display: inline-block;
+}
+
+.product__review{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 25px;
+}
+
+.product__title{
+    font-weight: 700;
+    color: #00b9fe;
+    font-size: 25px;
+    font-family: elektra_light_probold;
+}
+
+.product__table{
+    display: table;
+    width: 450px;
+}
+
+.product__tr{
+    display: table-row;
+}
+
+.product__tr:nth-child(2n){
+    background: #eef1f4;
+}
+
+.product__td{
+    display: table-cell;
+    padding: 11px 10px 9px 10px;
+    width: 50%;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+.about-shop__title{
+    font-size: 25px;
+    font-weight: 700;
+    font-family: elektra_light_probold;
+    margin-bottom: 15px;
+}
+
 .about-shop__text {
   column-count: 3;
   -moz-column-count: 3;
   -webkit-column-count: 3;
-  сolumn-gap: 20px;
-  -moz-column-gap: 20px;
-  -webkit-column-gap: 20px; }
+  сolumn-gap: 45px;
+  -moz-column-gap: 45px;
+  -webkit-column-gap: 45px;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+/*Class for p;agin css-column*/
+
+.about-shop__text p{
+    margin: 0;
+}
+
+
+
+
+
+
+.block-footer{
+    background: url(../images/bg-footer.jpg) repeat;
+}
+
+.footer{
+    width: 1000px;
+    margin: 0 auto;
+    height: 228px;
+    position: relative;
+}
+
+.logo-footer{
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 99px;
+}
+
+.logo-footer_img{
+    display: inline-block;
+    color: transparent;
+    background:url(../images/sprite.png) no-repeat -4px -87px;
+    width: 139px;
+    height: 42px;
+}
+
+.links-footer{
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: 260px;
+    top: 50px;
+}
+
+.links-footer__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-left: 70px;
+}
+
+.links-footer__list:first-child{
+    margin: 0;
+}
+
+.links-footer__title{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: elektra_light_probold;
+    margin-bottom: 5px;
+}
+
+.links-footer__link{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.social-footer{
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 72px;
+    right: 100px;
+}
+
+.social-footer__market{
+    color: transparent;
+}
+
+.social-footer__market--apple{
+    background: ;
+}
+
+.social-footer__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-footer__link{
+    color: transparent;
+}
+
 
 /* ==========================================================================
    Helper classes

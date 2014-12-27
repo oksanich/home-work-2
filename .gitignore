@@ -2,3 +2,4 @@
 node_modules
 app/bower_component
 dist
+.sass-cache
