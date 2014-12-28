@@ -276,8 +276,11 @@ body {
     border: 1px solid #dce6f0;
     padding: 0 10px;
     box-sizing: border-box;
-    color: #dce6f0;
     outline: none;
+}
+
+input::-webkit-input-placeholder{
+    color: #dce6f0;
 }
 
 .search-header__submit{
@@ -548,14 +551,58 @@ body {
     margin: auto;
 }
 
-.slideshow__list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.slideshow-carousel{
+    width: 245px;
+    overflow: hidden;
+    float: left;
 }
 
-.slideshow__item{
-    display: inline-block;
+.slideshow-carousel__list{
+    list-style: none;
+    position: relative;
+    left: -93px;
+    margin: 0px;
+    padding: 0px;
+    width:9999px;
+    padding-bottom:10px;
+}
+
+.slideshow-carousel__item{
+    float: left;
+    width: 75px;
+    padding: 0;
+    height: 75px;
+    margin-left: 9px;
+}
+
+.slideshow-carousel__pic img{
+    display: block;
+    max-width: 75px;
+    max-height: 75px;
+}
+
+.slideshow-carousel__left,
+.slideshow-carousel__right{
+    float: left;
+    width: 25px;
+    height: 40px;
+    margin-top: 15px;
+}
+
+.slideshow-carousel__left{
+    background: url(../images/sprite.png) no-repeat 0 -202px;
+}
+
+.slideshow-carousel__right{
+    background: url(../images/sprite.png) no-repeat -25px -202px;
+}
+
+.slideshow-carousel__left:hover{
+    background: url(../images/sprite.png) no-repeat -52px -202px;
+}
+
+.slideshow-carousel__right:hover{
+    background: url(../images/sprite.png) no-repeat -78px -202px;
 }
 
 .product__review{
@@ -590,15 +637,6 @@ body {
     width: 50%;
     font-size: 14px;
 }
-
-
-
-
-
-
-
-
-
 
 .about-shop__title{
     font-size: 25px;
