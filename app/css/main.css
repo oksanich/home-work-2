@@ -751,6 +751,44 @@ body {
     background: url(../images/sprite.png) no-repeat -105px -249px;
 }
 
+.scroll-up{
+    background: #00b9fe;
+    position: absolute;
+    right: 5%;
+    bottom: 250px;
+    padding: 10px;
+    cursor: pointer;
+    display:none;
+}
+
+.scroll-up__name{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: elektra_light_probold;
+}
+
+.scroll-up__name:before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -26px;
+    margin-left: -10px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #00b9fe;
+}
+
+.scroll-up__name:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -6px;
+    border: 6px solid transparent;
+    border-bottom: 6px solid #fff;
+}
 
 /* ==========================================================================
    Helper classes
