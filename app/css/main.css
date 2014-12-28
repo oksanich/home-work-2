@@ -364,7 +364,7 @@ body {
     padding: 0;
     width: 246px;
     right: 0;
-    z-index: 1;
+    z-index: 5;
     border: 1px solid #dce6f0;
     background-color: #fff;
     display: none;
@@ -420,6 +420,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .nav__link{
@@ -428,11 +429,74 @@ body {
 }
 
 .nav__item{
-    display: inline-block;
+    float: left;
 }
 
+.nav__link{
+    color: #5c7b98;
+    text-decoration: none;
+    padding: 0 0 0 43px;
+    height: 40px;
+    line-height: 40px;
+    background: #f7f7f7;
+    position: relative;
+    display: block;
+    float: left;
+    font-size: 15px;
+}
 
+.nav__link:after{
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #f7f7f7;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2;
+}
 
+.nav__link:before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #d7dfeb;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1;
+}
+
+.nav__item:first-child .nav__link {
+    padding-left: 20px;
+}
+
+.nav__link:hover {
+    background: #dce6f0;
+    color: #5c7b98;
+}
+
+.nav__link:hover:after {
+    border-left-color: #dce6f0;
+}
+
+.nav__link--active{
+    background: #00b9fe;
+    color: #fff;
+}
+
+.nav__link--active:after{
+    border-left-color: #00b9fe;
+}
 
 .block-content{
     width: 1000px;
@@ -626,20 +690,36 @@ body {
     line-height: 25px;
 }
 
+.links-footer__link:hover{
+    text-decoration: none;
+}
+
 .social-footer{
     display: inline-block;
     vertical-align: middle;
     position: absolute;
     top: 72px;
-    right: 100px;
+    right: 0;
 }
 
 .social-footer__market{
     color: transparent;
+    display: inline-block;
+    width: 92px;
+    height: 33px;
+    vertical-align: top;
+}
+
+.social-footer__markets{
+    margin-bottom: 25px;
 }
 
 .social-footer__market--apple{
-    background: ;
+    background: url(../images/sprite.png) no-repeat 0 -132px;
+}
+
+.social-footer__market--google{
+    background: url(../images/sprite.png) no-repeat -94px -132px;
 }
 
 .social-footer__list{
@@ -648,8 +728,27 @@ body {
     padding: 0;
 }
 
+.social-footer__item{
+    display: inline-block;
+}
+
 .social-footer__link{
     color: transparent;
+    display: inline-block;
+    width: 45px;
+    height: 44px;
+}
+
+.social-footer__link--vk{
+    background: url(../images/sprite.png) no-repeat -2px -249px;
+}
+
+.social-footer__link--fb{
+    background: url(../images/sprite.png) no-repeat -54px -249px;;
+}
+
+.social-footer__link--tw{
+    background: url(../images/sprite.png) no-repeat -105px -249px;
 }
 
 
