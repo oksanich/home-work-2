@@ -738,6 +738,7 @@ input::-webkit-input-placeholder{
     font-size: 15px;
     font-weight: 400;
     line-height: 25px;
+    -webkit-font-smoothing: antialiased
 }
 
 .links-footer__link:hover{
